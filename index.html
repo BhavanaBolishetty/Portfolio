@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavana Bolishetty | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- ================= STYLES ================= -->
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- ================= SCRIPT ================= -->
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="nav-capsule">
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <button id="themeToggle" class="nav-item toggle">🌙</button>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Bhavana Bolishetty</span></h1>
+
+        <h2 class="typing-line">
+          <span id="typing-text"></span>
+        </h2>
+        <br />
+
+        <p>
+          I build scalable, responsive, and user-focused web applications using
+          modern frontend and backend technologies.
+        </p>
+        <br />
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="assets/Bhavana-Resume.pdf" download>
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+          </a>
+          <a class="btn git" href="https://github.com/BhavanaBolishetty" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a class="btn lin" href="https://www.linkedin.com/in/bhavanabolishetty/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-wrapper">
+        <img src="assets/MyProfile.jpg" alt="Bhavana" />
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section reveal">
+      <div class="section-layout">
+        <div class="section-heading">
+          <h2>About <span>Me</span></h2>
+        </div>
+
+        <div class="section-content">
+          <div class="about-cards">
+
+            <div class="about-card">
+              <h3>Who I Am</h3>
+              <p>
+                I am a Software Engineer with 1+ year of professional industry experience,
+                a solid grounding in computer science fundamentals, and hands-on experience
+                developing scalable, production-ready applications.
+              </p>
+            </div>
+            <br />
+
+            <div class="about-card">
+              <h3>What I Do</h3>
+              <p>
+                I specialize in designing and developing full-stack web applications using
+                modern technologies such as React, Node.js, Go, Java, and PostgreSQL.
+                My work focuses on clean architecture, maintainable code, performance
+                optimization, and delivering intuitive user experiences.
+              </p>
+            </div>
+            <br />
+
+            <div class="about-card">
+              <h3>My Goal</h3>
+              <p>
+                My goal is to grow as a software engineer by contributing to high-impact
+                products and solving real-world problems at scale. I am seeking internship
+                and full-time opportunities where I can collaborate with experienced teams
+                and continue strengthening my technical depth.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section reveal">
+      <div class="section-layout">
+        <div class="section-heading">
+          <h2>Education</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div class="content">
+                <h3>University of Houston – Clear Lake, Houston, TX</h3>
+                <p class="degree">Master of Science in Computer Science</p>
+                <p class="desc">Aug 2024 - May 2026</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="dot"></span>
+              <div class="content">
+                <h3>Osmania University, Hyderabad, India</h3>
+                <p class="degree">Bachelor of Engineering</p>
+                <p class="desc">Sep 2021 - May 2024</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience" class="section reveal">
+      <div class="section-layout">
+        <div class="section-heading">
+          <h2>Experience</h2>
+        </div>
+
+        <div class="section-content">
+          <div class="experience-card">
+            <h3>Graduate Student Assistant</h3>
+            <p class="company">Computer Science Department, UHCL - Houston, TX</p>
+            <p class="duration">Jan 2025 – Present</p>
+          </div>
+
+          <div class="experience-card">
+            <h3>Software Engineer</h3>
+            <p class="company">FinMkt - Hyderabad, India</p>
+            <p class="duration">June 2023 – July 2024</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section reveal">
+      <div class="section-layout">
+        <div class="section-heading">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="section-content">
+          <!-- Programming -->
+          <div class="skill-group">
+            <h3>Programming Languages</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-solid fa-c"></i>C++</div>
+              <div class="skill"><i class="fa-brands fa-java"></i>Java</div>
+              <div class="skill"><i class="fa-brands fa-python"></i>Python</div>
+              <div class="skill"><i class="fa-brands fa-js"></i>JavaScript</div>
+              <div class="skill"><i class="fa-solid fa-code"></i>TypeScript</div>
+              <div class="skill"><i class="fa-brands fa-golang"></i>Go</div>
+            </div>
+          </div>
+
+          <!-- Web -->
+          <div class="skill-group">
+            <h3>Web & Frameworks</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-brands fa-react"></i>React.js</div>
+              <div class="skill"><i class="fa-solid fa-layer-group"></i>Redux</div>
+              <div class="skill"><i class="fa-brands fa-node"></i>Node.js</div>
+              <div class="skill"><i class="fa-solid fa-server"></i>Express.js</div>
+              <div class="skill"><i class="fa-brands fa-html5"></i>HTML5</div>
+              <div class="skill"><i class="fa-brands fa-css3-alt"></i>CSS3</div>
+              <div class="skill"><i class="fa-brands fa-css3"></i>Tailwind CSS</div>
+              <div class="skill"><i class="fa-solid fa-leaf"></i>Spring Boot</div>
+              <div class="skill"><i class="fa-brands fa-python"></i>Django</div>
+              <div class="skill"><i class="fa-solid fa-flask"></i>Flask</div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-group">
+            <h3>Databases</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-solid fa-database"></i>MySQL</div>
+              <div class="skill"><i class="fa-solid fa-database"></i>PostgreSQL</div>
+              <div class="skill"><i class="fa-solid fa-database"></i>MongoDB</div>
+              <div class="skill"><i class="fa-solid fa-fire"></i>Firebase</div>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="skill-group">
+            <h3>Cloud & DevOps</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-brands fa-aws"></i>AWS</div>
+              <div class="skill"><i class="fa-brands fa-docker"></i>Docker</div>
+              <div class="skill"><i class="fa-solid fa-code-branch"></i>GitHub Actions</div>
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div class="skill-group">
+            <h3>Testing</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-solid fa-vial"></i>JUnit</div>
+              <div class="skill"><i class="fa-solid fa-vial"></i>Jest</div>
+              <div class="skill"><i class="fa-solid fa-vial"></i>React Testing Library</div>
+            </div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skill-group">
+            <h3>Concepts & Architecture</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-solid fa-diagram-project"></i>DSA</div>
+              <div class="skill"><i class="fa-solid fa-network-wired"></i>REST APIs</div>
+              <div class="skill"><i class="fa-solid fa-lock"></i>OAuth 2.0</div>
+              <div class="skill"><i class="fa-solid fa-key"></i>JWT</div>
+              <div class="skill"><i class="fa-solid fa-shield"></i>Authentication</div>
+              <div class="skill"><i class="fa-solid fa-sitemap"></i>System Design</div>
+              <div class="skill"><i class="fa-solid fa-computer"></i>Client–Server</div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group">
+            <h3>Tools & IDEs</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fa-brands fa-git-alt"></i>Git</div>
+              <div class="skill"><i class="fa-brands fa-github"></i>GitHub</div>
+              <div class="skill"><i class="fa-solid fa-bug"></i>Postman</div>
+              <div class="skill"><i class="fa-brands fa-jira"></i>Jira</div>
+              <div class="skill"><i class="fa-solid fa-code"></i>VS Code</div>
+              <div class="skill"><i class="fa-solid fa-code"></i>Eclipse</div>
+              <div class="skill"><i class="fa-solid fa-code"></i>PyCharm</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section reveal">
+      <div class="section-layout">
+        <div class="section-heading">
+          <h2>Projects</h2>
+        </div>
+        <div class="section-content">
+          <div class="container">
+            <div class="projects-grid">
+
+              <!-- Project 1 -->
+              <a href="https://github.com/YOUR_GITHUB_USERNAME/realtime-code-editor"
+                target="_blank"
+                class="project-link">
+                <div class="project-card">
+                  <img src="assets/codeEditor.png" alt="Code editor">
+                  <div class="project-content">
+                    <h3>Realtime Collaborative Code Editor</h3>
+                    <p>
+                      Web-based collaborative editor allowing multiple users to join rooms
+                      and edit code in real time with low-latency synchronization.
+                    </p>
+                  
+                    <div class="project-tech">
+                      <span>Node.js</span>
+                      <span>Express</span>
+                      <span>React</span>
+                      <span>Socket.io</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 2 -->
+              <a href="https://github.com/YOUR_GITHUB_USERNAME/email-notification-system"
+                target="_blank"
+                class="project-link">
+                <div class="project-card">
+                  <img src="assets/whatsapp.png" alt="email notification system">
+                  <div class="project-content">
+                    <h3>Smart Email Notification System</h3>
+                    <p>
+                      Background service that monitors Gmail and sends priority-based
+                      WhatsApp alerts in real time.
+                    </p>
+                  
+                    <div class="project-tech">
+                      <span>Python</span>
+                      <span>Gmail API</span>
+                      <span>Twilio</span>
+                      <span>OAuth</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 3 -->
+              <a href="https://github.com/YOUR_GITHUB_USERNAME/job-tracker"
+                target="_blank"
+                class="project-link">
+                <div class="project-card">
+                  <img src="assets/apptracker.png" alt="Job job-tracker">
+                  <div class="project-content">
+                    <h3>Job Application Tracker</h3>
+                    <p>
+                      Dashboard-style application to track job applications by status with
+                      search and filtering.
+                    </p>
+                    
+                    <div class="project-tech">
+                      <span>Go</span>
+                      <span>PostgreSQL</span>
+                      <span>REST APIs</span>
+                      <span>TypeScript</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Project 4 -->
+              <a href="https://github.com/YOUR_GITHUB_USERNAME/skincare-ecommerce"
+                target="_blank"
+                class="project-link">
+                <div class="project-card">
+                  <img src="assets/skincare.png" alt="E-Commerce platform">
+                  <div class="project-content">
+                    <h3>Skincare Essentials E-Commerce Platform</h3>
+                    <p>
+                      Full-stack e-commerce platform with product browsing, cart, and checkout.
+                    </p>
+              
+                    <div class="project-tech">
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>JavaScript</span>
+                      <span>PHP</span>
+                      <span>MySQL</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- CineBuzz -->
+              <a href="https://github.com/YOUR_GITHUB_USERNAME/CineBuzz"
+              target="_blank"
+              class="project-link">
+              <div class="project-card">
+                <img src="assets/cinebuzz.png" alt="cinebuzz">
+                <div class="project-content">
+                  <h3>CineBuzz – iOS Movie Discovery App</h3>
+                  <p>
+                    iOS application for browsing trending movies, searching by title,
+                    and viewing detailed movie information using live public APIs.
+                  </p>
+                
+                  <div class="project-tech">
+                    <span>Swift</span>
+                    <span>UIKit</span>
+                    <span>REST APIs</span>
+                    <span>Xcode</span>
+                  </div>
+                </div>
+              </div>
+              </a>
+
+              <!-- Personal Finance Goal Planner -->
+              <a href="https://github.com/oofangoo/personal-finance-planner"
+                target="_blank"
+                class="project-link">
+                <div class="project-card">
+                  <img src="assets/finance.png" alt="finance planner">
+                  <div class="project-content">
+                    <h3>Personal Finance Goal Planner</h3>
+                    <p>
+                      Advanced finance planning app for tracking income, expenses, goals,
+                      forecasts, and analytics with future AI-powered insights.
+                    </p>
+                    
+                    <div class="project-tech">
+                      <span>Next.js</span>
+                      <span>React</span>
+                      <span>TypeScript</span>
+                      <span>Tailwind</span>
+                      <span>Recharts</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section reveal">
+      <h2 class="section-title">Contact Me</h2>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form></br>
+      <p class="contact-text">
+        I’m currently open to internships and full-time opportunities.
+        Feel free to reach out — I’d love to connect!
+      </p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="mailto:bhavanabolishetty2911@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/BhavanaBolishetty" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bhavanabolishetty/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+      <p>© 2026 Bhavana Bolishetty</p>
+    </footer>
+
+  </body>
+</html>
