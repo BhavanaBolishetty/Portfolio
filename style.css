@@ -254,7 +254,7 @@ a:hover {
 .btn.lin:hover { color: rgb(34, 159, 226); }
 
 
-/* ======================= SECTIONS & LAYOUT ======================= */
+/* ======================= SECTIONS & LAYOUT ==================== */
 
 .section {
   padding: 100px 8%;
@@ -327,7 +327,7 @@ a:hover {
 
 .about-card h3 {
   color: var(--primary);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   font-size: 1.5rem;
 }
 
@@ -426,6 +426,19 @@ a:hover {
   color: var(--muted);
   margin-bottom: 14px;
   font-size: 1.2rem;
+}
+
+.experience-box ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-box li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text);
 }
 
 .experience-card::before {
