@@ -20,17 +20,29 @@
   <body>
 
     <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
+     <header>
+    <nav class="navbar">
       <div class="nav-capsule">
-        <a href="#home" class="nav-item active">Home</a>
-        <a href="#about" class="nav-item">About</a>
-        <a href="#experience" class="nav-item">Experience</a>
-        <a href="#skills" class="nav-item">Skills</a>
-        <a href="#projects" class="nav-item">Projects</a>
-        <a href="#contact" class="nav-item">Contact</a>
-        <button id="themeToggle" class="nav-item toggle">🌙</button>
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#home" class="nav-item active">Home</a>
+          <a href="#about" class="nav-item">About</a>
+          <a href="#experience" class="nav-item">Experience</a>
+          <a href="#skills" class="nav-item">Skills</a>
+          <a href="#projects" class="nav-item">Projects</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </div>
+        <button id="themeToggle" class="nav-item toggle">
+          🌙
+        </button>
+
       </div>
-    </header>
+    </nav>
+</header>
 
     <!-- ================= HERO ================= -->
     <section id="home" class="section hero">

@@ -52,40 +52,67 @@ handleReveal();
 
 /* ================= ACTIVE NAV LINK ================= */
 const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-item[href^='#']");
+const navItems = document.querySelectorAll(".nav-item");
 
 function updateActiveNav() {
-  let current = "";
+  let currentSection = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 200;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
+    const sectionTop = section.offsetTop - 120;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      currentSection = section.getAttribute("id");
     }
   });
 
-  navLinks.forEach(link => {
-    link.classList.toggle(
-      "active",
-      link.getAttribute("href") === `#${current}`
-    );
+  navItems.forEach(item => {
+    item.classList.remove("active");
+    if (item.getAttribute("href") === `#${currentSection}`) {
+      item.classList.add("active");
+    }
   });
 }
 
 window.addEventListener("scroll", updateActiveNav);
-updateActiveNav();
+window.addEventListener("load", updateActiveNav);
+
+/* ====================RESPONSIVE NAVBAR================*/
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
 
 /* ================= THEME TOGGLE ================= */
-const themeToggle = document.getElementById("themeToggle");
+const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 
+// DEFAULT = DARK MODE
 body.classList.add("dark");
-themeToggle.textContent = "🔆";
+toggleBtn.textContent = "🔆";
 
-themeToggle.addEventListener("click", () => {
+toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
-  themeToggle.textContent = body.classList.contains("dark") ? "🔆" : "🌙";
+
+  if (body.classList.contains("dark")) {
+    toggleBtn.textContent = "🔆";
+  } else {
+    toggleBtn.textContent = "🌙";
+  }
 });
+
 
 /* ================= CONTACT FORM ================= */
 document.addEventListener("DOMContentLoaded", () => {
@@ -117,9 +144,10 @@ contactForm.addEventListener("submit", function (e) {
 
 
 /* ================= PAGE RELOAD BEHAVIOR ================= */
-const navEntries = performance.getEntriesByType("navigation");
-if (navEntries.length && navEntries[0].type === "reload") {
-  window.location.replace("#home");
-}
+window.addEventListener("load", () => {
+  if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+});
 
 
