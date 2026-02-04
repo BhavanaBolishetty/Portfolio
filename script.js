@@ -1,38 +1,39 @@
 /* ================= TYPING EFFECT ================= */
 const roles = [
   "Software Engineer",
-  "Full Stack Developer",
+  "Full-Stack Developer",
   "Frontend Developer",
   "Backend Developer"
 ];
 
 let roleIndex = 0;
 let charIndex = 0;
-let deleting = false;
+let isDeleting = false;
 
-const typingText = document.getElementById("typing-text");
+function typeEffect() {
+  const typingElement = document.getElementById("typing-text");
+  if (!typingElement) return;
 
-function typingEffect() {
-  if (!typingText) return;
+  const fullText = roles[roleIndex];
+  typingElement.textContent = isDeleting
+    ? fullText.slice(0, --charIndex)
+    : fullText.slice(0, ++charIndex);
 
-  const currentRole = roles[roleIndex];
+  let speed = isDeleting ? 60 : 120;
 
-  if (!deleting) {
-    typingText.textContent = currentRole.slice(0, ++charIndex);
-    if (charIndex === currentRole.length) {
-      deleting = true;
-      setTimeout(() => {}, 1000);
-    }
-  } else {
-    typingText.textContent = currentRole.slice(0, --charIndex);
-    if (charIndex === 0) {
-      deleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-    }
+  if (!isDeleting && charIndex === fullText.length) {
+    speed = 1200;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    speed = 400;
   }
 
-  setTimeout(typingEffect, deleting ? 60 : 120);
+  setTimeout(typeEffect, speed);
 }
+
+document.addEventListener("DOMContentLoaded", typeEffect);
 
 /* ================= SCROLL REVEAL ================= */
 const revealElements = document.querySelectorAll(".reveal");
@@ -79,23 +80,41 @@ const themeToggle = document.getElementById("themeToggle");
 const body = document.body;
 
 body.classList.add("dark");
-themeToggle.textContent = "☀️";
+themeToggle.textContent = "🔆";
 
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark");
-  themeToggle.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+  themeToggle.textContent = body.classList.contains("dark") ? "🔆" : "🌙";
 });
 
 /* ================= CONTACT FORM ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.emailjs) {
+    emailjs.init("slPiWUe7bE4wtXN_J");
+  }
+});
+
 const contactForm = document.getElementById("contactForm");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Thank you! Your message has been sent.");
-    contactForm.reset();
-  });
-}
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_sqhsjxt",
+      "template_o9gdf5k",
+      this
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      contactForm.reset();
+    })
+    .catch((error) => {
+      alert("Failed to send message. Try again later.");
+      console.error(error);
+    });
+});
+
 
 /* ================= PAGE RELOAD BEHAVIOR ================= */
 const navEntries = performance.getEntriesByType("navigation");
@@ -103,6 +122,4 @@ if (navEntries.length && navEntries[0].type === "reload") {
   window.location.replace("#home");
 }
 
-/* ================= INIT ================= */
-typingEffect();
 
